@@ -45,7 +45,7 @@ This Project is a begining for a Big prject in the future
 * A little knowledge of Dart and Flutter
 * A brain to think 🤓🤓
 
-🤓 Author(s)
+# 🤓 Author(s)
 Elias Lyon Bro©
 
 
