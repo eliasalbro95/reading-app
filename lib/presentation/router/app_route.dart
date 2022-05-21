@@ -1,15 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:reading_app/logic/cubits/reading_cubit.dart';
 import 'package:reading_app/presentation/layout/home_screen.dart';
-import 'package:reading_app/presentation/screens/category_screen.dart';
+import 'package:reading_app/presentation/screens/book_screen.dart';
 import 'package:reading_app/presentation/screens/liked_books_screen.dart';
 import 'package:reading_app/presentation/screens/profile_screen.dart';
-import 'package:reading_app/presentation/screens/registeration_screen.dart';
 import 'package:reading_app/presentation/screens/saved_books_screen.dart';
-import 'package:reading_app/presentation/screens/sign_in_screen.dart';
 import 'package:reading_app/presentation/screens/welcome_screen.dart';
-import 'package:reading_app/shared/constants/login.dart';
+import 'package:reading_app/shared/constants/api_fetch.dart';
 import 'package:reading_app/shared/style/color/colors.dart';
 
 class AppRoute {
@@ -31,26 +28,36 @@ class AppRoute {
                         child: Text("Error"),
                       );
                     } else if (snapshot.hasData) {
-                      return HomeScreen();
+                      return const HomeScreen();
                     } else {
-                      return WelcomeScreen();
+                      return const WelcomeScreen();
                     }
                   },
                 ));
-      case "/signup":
-        return MaterialPageRoute(builder: (_) => RegisterScreen());
-      case "/signin":
-        return MaterialPageRoute(builder: (_) => SignInScreen());
+      // case "/signup":
+      //   return MaterialPageRoute(builder: (_) => RegisterScreen());
+      // case "/signin":
+      //   return MaterialPageRoute(builder: (_) => SignInScreen());
       case "/home":
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       case "/profile":
-        return MaterialPageRoute(builder: (_) => ProfileScreen());
+        return MaterialPageRoute(builder: (_) => const ProfileScreen());
       case "/liked":
-        return MaterialPageRoute(builder: (_) => LikedBooksScreen());
+        return MaterialPageRoute(builder: (_) => const LikedBooksScreen());
       case "/saved":
-        return MaterialPageRoute(builder: (_) => SavedBooksScreen());
-      case "/category":
-        return MaterialPageRoute(builder: (_) => CategoryScreen());
+        return MaterialPageRoute(builder: (_) => const SavedBooksScreen());
+      // case "/category":
+      //   return MaterialPageRoute(builder: (_) => CategoryScreen());
+      case "/book":
+        return MaterialPageRoute(
+            builder: (_) => BookScreen(
+                  imageUrl: bookScreenArgs[0],
+                  authors: bookScreenArgs[1],
+                  title: bookScreenArgs[2],
+                  subtitle: bookScreenArgs[3],
+                  rate: bookScreenArgs[4].toDouble(),
+                  description: bookScreenArgs[5],
+                ));
     }
   }
 }

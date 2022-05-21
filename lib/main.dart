@@ -12,6 +12,7 @@ import 'package:reading_app/presentation/screens/registeration_screen.dart';
 import 'package:reading_app/presentation/screens/saved_books_screen.dart';
 import 'package:reading_app/presentation/screens/sign_in_screen.dart';
 import 'package:reading_app/presentation/screens/welcome_screen.dart';
+import 'package:reading_app/shared/constants/category.dart';
 import 'package:reading_app/shared/style/theme/theme.dart';
 
 Future main()async {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ReadingCubit(),
+      create: (context) => ReadingCubit()..getCategory(category: category[0].toLowerCase()),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Reading App',

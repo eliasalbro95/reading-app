@@ -24,7 +24,6 @@ List<String> category = [
   "Western",
 ];
 List<String> categoryHomePage = [
-  "all",
   "Advertising",
   "Architecture",
   "Biography",
@@ -50,7 +49,7 @@ List<String> categoryHomePage = [
   "Western",
 ];
 
-
+int selectedCategoryNumber = 0;
 
 
 List<String> categoryUrl = [

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:iconify_flutter/icons/ic.dart';
 import 'package:reading_app/logic/cubits/reading_cubit.dart';
 import 'package:reading_app/presentation/widgets/welcome_screen_widgets.dart';
-import 'package:reading_app/presentation/widgets/widgets.dart';
-import 'package:reading_app/shared/constants/login.dart';
 import 'package:reading_app/shared/constants/screen.dart';
 import 'package:reading_app/shared/style/color/colors.dart';
 import 'package:colorful_iconify_flutter/icons/logos.dart';
@@ -38,7 +35,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             decoration: const BoxDecoration(
               color: Colors.black,
             ),
-          ), // backgrund
+          ), // background
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -92,9 +89,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 //         borderRadius: BorderRadius.circular(10)),
                 //   ),
                 // ),
-                SizedBox(
-                  height: _screen.height * 0.015,
-                ),
+                // SizedBox(
+                //   height: _screen.height * 0.015,
+                // ),
                 // signInButtonWidget(
                 //   icon: const Iconify(Logos.facebook),
                 //   sizedBoxWidth: _screen.width * 0.03,
@@ -110,41 +107,41 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 // SizedBox(
                 //   height: _screen.height * 0.015,
                 // ),
-                signInButtonWidget(
-                  icon: Iconify(
-                    Ic.outline_email,
-                    color: mainWhite,
-                  ),
-                  sizedBoxWidth: _screen.width * 0.03,
-                  color: mainCyan,
-                  text: "Email",
-                  textColor: mainWhite,
-                  screen: _screen,
-                  onPressed: () {
-                    Navigator.of(context).pushNamed("/signup");
-                  },
-                ),
-                SizedBox(
-                  height: _screen.height * .03,
-                ),
-                Text(
-                  "OR",
-                  style: TextStyle(fontSize: 20, color: mainWhite,fontWeight: FontWeight.w500,decoration: TextDecoration.underline),
-                ),
-                SizedBox(
-                  height: _screen.height * .02,
-                ),
-                SizedBox(
-                  height: _screen.height * 0.06,
-                  width: _screen.width * 0.7,
-                  child: signInUpButton(
-                      onPressed: () {
-                        Navigator.of(context).pushNamed("/signin");
-                      },
-                      text: "Sign In",
-                      color: mainWhite,
-                      textColor: mainDeepBlue),
-                ),
+                // signInButtonWidget(
+                //   icon: Iconify(
+                //     Ic.outline_email,
+                //     color: mainWhite,
+                //   ),
+                //   sizedBoxWidth: _screen.width * 0.03,
+                //   color: mainCyan,
+                //   text: "Email",
+                //   textColor: mainWhite,
+                //   screen: _screen,
+                //   onPressed: () {
+                //     Navigator.of(context).pushNamed("/signup");
+                //   },
+                // ),
+                // SizedBox(
+                //   height: _screen.height * .03,
+                // ),
+                // Text(
+                //   "OR",
+                //   style: TextStyle(fontSize: 20, color: mainWhite,fontWeight: FontWeight.w500,decoration: TextDecoration.underline),
+                // ),
+                // SizedBox(
+                //   height: _screen.height * .02,
+                // ),
+                // SizedBox(
+                //   height: _screen.height * 0.06,
+                //   width: _screen.width * 0.7,
+                //   child: signInUpButton(
+                //       onPressed: () {
+                //         Navigator.of(context).pushNamed("/signin");
+                //       },
+                //       text: "Sign In",
+                //       color: mainWhite,
+                //       textColor: mainDeepBlue),
+                // ),
               ],
             ),
           ),

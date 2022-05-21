@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
-import 'package:iconify_flutter/icons/mdi.dart';
-import 'package:iconify_flutter/icons/uil.dart';
 import 'package:reading_app/shared/constants/screen.dart';
 
 import 'package:reading_app/shared/style/color/colors.dart';
@@ -72,26 +70,26 @@ PreferredSizeWidget appBarDefault({
       ],
     ),
     leading: null,
-    actions: [
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 18.0),
-        child: InkWell(
-          child: Iconify(
-            Uil.search,
-            color: mainDeepBlue,
-          ),
-          onTap: () =>
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text(
-                  "Go for search dude!",
-                  style: TextStyle(color: mainDeepBlue),
-                ),
-                duration: const Duration(seconds: 1),
-                backgroundColor: mainWhite,
-              )),
-        ),
-      ),
-    ],
+    // actions: [
+    //   Padding(
+    //     padding: const EdgeInsets.symmetric(horizontal: 18.0),
+    //     child: InkWell(
+    //       child: Iconify(
+    //         Uil.search,
+    //         color: mainDeepBlue,
+    //       ),
+    //       onTap: () =>
+    //           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //             content: Text(
+    //               "Go for search dude!",
+    //               style: TextStyle(color: mainDeepBlue),
+    //             ),
+    //             duration: const Duration(seconds: 1),
+    //             backgroundColor: mainWhite,
+    //           )),
+    //     ),
+    //   ),
+    // ],
   );
 }
 
@@ -122,12 +120,12 @@ PreferredSizeWidget appBarProfile({
         ],
       ),
     ),
-    actions: [
-      Padding(
-        padding: EdgeInsets.symmetric(horizontal: screen.width * .02),
-        child: Iconify(Mdi.dots_horizontal, color: mainDeepBlue),
-      ),
-    ],
+    // actions: [
+    //   Padding(
+    //     padding: EdgeInsets.symmetric(horizontal: screen.width * .02),
+    //     child: Iconify(Mdi.dots_horizontal, color: mainDeepBlue),
+    //   ),
+    // ],
   );
 }
 

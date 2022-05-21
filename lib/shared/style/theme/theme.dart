@@ -12,13 +12,13 @@ class AppTheme{
         color: mainWhite
       )
     ),
-    tabBarTheme: TabBarTheme(
-      labelStyle: TextStyle(
-        fontSize: 16,
-      ),
-      indicator: UnderlineTabIndicator(
-        borderSide: BorderSide(color: Colors.transparent)
-      )
-    ),
+    // tabBarTheme: const TabBarTheme(
+    //   labelStyle: TextStyle(
+    //     fontSize: 16,
+    //   ),
+    //   indicator: UnderlineTabIndicator(
+    //     borderSide: BorderSide(color: Colors.transparent)
+    //   )
+    // ),
   );
 }

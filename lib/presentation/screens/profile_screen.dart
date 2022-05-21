@@ -3,13 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ant_design.dart';
-import 'package:iconify_flutter/icons/healthicons.dart';
 import 'package:iconify_flutter/icons/ic.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
-import 'package:iconify_flutter/icons/ph.dart';
+// import 'package:rate_my_app/rate_my_app.dart';
 import 'package:reading_app/logic/cubits/reading_cubit.dart';
-import 'package:reading_app/main.dart';
-import 'package:reading_app/presentation/widgets/profile_screen_widgets.dart';
 import 'package:reading_app/shared/constants/screen.dart';
 import 'package:reading_app/shared/style/color/colors.dart';
 
@@ -41,10 +38,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Iconify(
-                      Ic.twotone_keyboard_arrow_left,
-                      color: mainDeepBlue,
-                      size: 40,
+                    InkWell(
+                      onTap: () => Navigator.of(context).pop(),
+                      child: Iconify(
+                        Ic.twotone_keyboard_arrow_left,
+                        color: mainDeepBlue,
+                        size: 40,
+                      ),
                     ),
                     Text(
                       "back",
@@ -60,12 +60,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     color: mainWhite,
                     onSelected: (item) {
                       switch (item) {
-                        case 'Settings':
-                          print('Home clicked');
-                          break;
-                        case 'About':
-                          print('Profile clicked');
-                          break;
                         case 'Log out':
                           _readingCubit.googleLogout();
                           Navigator.of(context).pushNamed("/");
@@ -124,7 +118,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         horizontal: _screen.width * .01),
                                     child: Text(
                                       user.displayName!,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ),
@@ -146,7 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     horizontal: _screen.width * .01),
                                 child: Text(
                                   user.email!,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 12, color: Colors.grey),
                                 ),
                               ),
@@ -186,84 +180,110 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       EdgeInsets.symmetric(horizontal: _screen.width * .03),
                   child: Column(
                     children: [
+                      // ListTile(
+                      //   title: const Text(
+                      //     "Customize your intrests",
+                      //     style: TextStyle(
+                      //         fontSize: 18, fontWeight: FontWeight.w300),
+                      //   ),
+                      //   trailing: Iconify(
+                      //     Ic.twotone_keyboard_arrow_right,
+                      //     color: mainDeepBlue,
+                      //     size: 25,
+                      //   ),
+                      //   onTap: () {
+                      //     Navigator.of(context).pushNamed("/category");
+                      //   },
+                      // ),
+                      // const ListTile(
+                      //   leading: Iconify(
+                      //     Ic.outline_history,
+                      //     size: 25,
+                      //   ),
+                      //   title: Text(
+                      //     "History",
+                      //     style: TextStyle(
+                      //         fontSize: 18, fontWeight: FontWeight.w300),
+                      //   ),
+                      // ),
+                      // ListTile(
+                      //   leading: const Iconify(
+                      //     Ic.favorite_border,
+                      //     size: 25,
+                      //   ),
+                      //   title: const Text(
+                      //     "Likes",
+                      //     style: TextStyle(
+                      //         fontSize: 18, fontWeight: FontWeight.w300),
+                      //   ),
+                      //   trailing: Padding(
+                      //     padding: EdgeInsets.symmetric(
+                      //         horizontal: _screen.width * .02),
+                      //     child: const Text("3"),
+                      //   ),
+                      //   onTap: () {
+                      //     Navigator.of(context).pushNamed("/liked");
+                      //   },
+                      // ),
+                      // ListTile(
+                      //   leading: const Iconify(
+                      //     Ic.bookmark_border,
+                      //     size: 25,
+                      //   ),
+                      //   title: const Text(
+                      //     "Saved",
+                      //     style: TextStyle(
+                      //         fontSize: 18, fontWeight: FontWeight.w300),
+                      //   ),
+                      //   trailing: Padding(
+                      //     padding: EdgeInsets.symmetric(
+                      //         horizontal: _screen.width * .02),
+                      //     child: const Text("7"),
+                      //   ),
+                      //   onTap: () {
+                      //     Navigator.of(context).pushNamed("/saved");
+                      //   },
+                      // ),
+                      // ListTile(
+                      //   leading: const Iconify(
+                      //     Ic.favorite_border,
+                      //     size: 25,
+                      //   ),
+                      //   title: const Text(
+                      //     "Likes",
+                      //     style: TextStyle(
+                      //         fontSize: 18, fontWeight: FontWeight.w300),
+                      //   ),
+                      //   trailing: Padding(
+                      //     padding: EdgeInsets.symmetric(
+                      //         horizontal: _screen.width * .02),
+                      //     child: const Text("3"),
+                      //   ),
+                      // ),
                       ListTile(
+                        onTap: () async {
+                          // RateMyApp rateMyApp = RateMyApp();
+                          // return await rateMyApp.showStarRateDialog(context);
+                        },
+                        leading: const Iconify(
+                          Ic.baseline_star_outline,
+                          size: 25,
+                        ),
                         title: const Text(
-                          "Customize your intrests",
+                          "Rate us",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w300),
                         ),
-                        trailing: Iconify(
-                          Ic.twotone_keyboard_arrow_right,
-                          color: mainDeepBlue,
-                          size: 25,
-                        ),
-                        onTap: () {
-                          Navigator.of(context).pushNamed("/category");
-                        },
                       ),
                       const ListTile(
                         leading: Iconify(
-                          Ic.outline_history,
+                          Ic.outline_info,
                           size: 25,
                         ),
                         title: Text(
-                          "History",
+                          "About",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                      ListTile(
-                        leading: const Iconify(
-                          Ic.favorite_border,
-                          size: 25,
-                        ),
-                        title: const Text(
-                          "Likes",
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w300),
-                        ),
-                        trailing: Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: _screen.width * .02),
-                          child: const Text("3"),
-                        ),
-                        onTap: () {
-                          Navigator.of(context).pushNamed("/liked");
-                        },
-                      ),
-                      ListTile(
-                        leading: const Iconify(
-                          Ic.bookmark_border,
-                          size: 25,
-                        ),
-                        title: const Text(
-                          "Saved",
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w300),
-                        ),
-                        trailing: Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: _screen.width * .02),
-                          child: const Text("7"),
-                        ),
-                        onTap: () {
-                          Navigator.of(context).pushNamed("/saved");
-                        },
-                      ),
-                      ListTile(
-                        leading: const Iconify(
-                          Ic.favorite_border,
-                          size: 25,
-                        ),
-                        title: const Text(
-                          "Likes",
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w300),
-                        ),
-                        trailing: Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: _screen.width * .02),
-                          child: const Text("3"),
                         ),
                       ),
                     ],
@@ -281,12 +301,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
             unselectedItemColor: Colors.grey,
             items: [
               BottomNavigationBarItem(
-                  icon: Iconify(Ph.stack_thin, color: mainDeepBlue),
-                  label: "Stack"),
-              BottomNavigationBarItem(
-                  icon: Iconify(
-                    AntDesign.home_outlined,
-                    color: mainDeepBlue,
+                  icon: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed("/home");
+                    },
+                    child: Iconify(
+                      AntDesign.home_outlined,
+                      color: mainDeepBlue,
+                    ),
                   ),
                   label: "Home"),
               BottomNavigationBarItem(
@@ -302,13 +324,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  var _myMenuItems = <String>[
-    'Settings',
-    'About',
+  final _myMenuItems = <String>[
     'Log out',
   ];
 
-// void _onSelect(item) {
-//
-// }
 }

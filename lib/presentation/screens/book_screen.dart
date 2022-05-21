@@ -3,18 +3,33 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
 import 'package:iconify_flutter/icons/ph.dart';
 import 'package:reading_app/presentation/widgets/widgets.dart';
-import 'package:reading_app/shared/constants/category.dart';
 import 'package:reading_app/shared/constants/screen.dart';
 import 'package:reading_app/shared/style/color/colors.dart';
 
 class BookScreen extends StatefulWidget {
-  const BookScreen({Key? key}) : super(key: key);
-
+  const BookScreen({Key? key, required this.imageUrl, required this.authors, required this.title, required this.subtitle, required this.rate, required this.description}) : super(key: key);
+  final String imageUrl;
+  final List<String> authors;
+  final String title;
+  final String subtitle;
+  final double rate;
+  final String description;
   @override
-  State<BookScreen> createState() => _BookScreenState();
+  State<BookScreen> createState() => _BookScreenState(imageUrl,authors,title,subtitle,rate,description);
 }
 
 class _BookScreenState extends State<BookScreen> {
+  final String imageUrl1;
+  final List<String> authors1;
+  final String title1;
+  final String subtitle1;
+  final double rate1;
+  final String description1;
+
+  _BookScreenState(this.imageUrl1, this.authors1, this.title1, this.subtitle1, this.rate1, this.description1,
+      );
+
+
   @override
   Widget build(BuildContext context) {
     ResponsiveScreen _screen = ResponsiveScreen(context);
@@ -40,7 +55,7 @@ class _BookScreenState extends State<BookScreen> {
                           image: DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(
-                              categoryUrl[2],
+                              imageUrl1,
                             ),
                           )),
                     ),
@@ -53,31 +68,17 @@ class _BookScreenState extends State<BookScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
-                              flex: 2,
+                              flex: 1,
                               child: RichText(
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                        text: "Marc Wilhelm Lennartz",
+                                        text: authors1[0],
                                         style: TextStyle(
                                             overflow: TextOverflow.ellipsis,
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 14,
+                                            fontSize: 16,
                                             color: mainLightOrange)),
-                                    TextSpan(
-                                        text: "\nand",
-                                        style: TextStyle(
-                                            overflow: TextOverflow.clip,
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                            color: mainDeepBlue)),
-                                    TextSpan(
-                                        text: " Susanne Jacob-Freitag",
-                                        style: TextStyle(
-                                            overflow: TextOverflow.clip,
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                            color: mainLightOrange))
                                   ],
                                 ),
                               ),
@@ -85,35 +86,35 @@ class _BookScreenState extends State<BookScreen> {
                             // SizedBox(
                             //   height: _screen.height * .015,
                             // ),
-                            Flexible(
+                            Expanded(
                               flex: 4,
                               child: Text(
-                                "New\nArchitecture\nin Wood",
+                                title1,
                                 style: TextStyle(
-                                    height: _screen.height * .0017,
+                                    height: _screen.height * .0015,
                                     fontWeight: FontWeight.w600,
-                                    fontSize: 28),
+                                    fontSize: 22),
                               ),
                             ),
                             // SizedBox(
                             //   height: _screen.height * .015,
                             // ),
-                            const Expanded(
-                              flex: 1,
-                              child: Center(
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Form and Structures",
-                                    style: TextStyle(
-                                      fontFamily: "Nunito Sans",
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                            //  Expanded(
+                            //   flex: 1,
+                            //   child: Center(
+                            //     child: Align(
+                            //       alignment: Alignment.centerLeft,
+                            //       child: Text(
+                            //         subtitle1,
+                            //         style: TextStyle(
+                            //           fontFamily: "Nunito Sans",
+                            //           fontSize: 14,
+                            //           color: Colors.grey,
+                            //         ),
+                            //       ),
+                            //     ),
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),
@@ -184,7 +185,7 @@ class _BookScreenState extends State<BookScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "4.9",
+                          "$rate1",
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
@@ -244,8 +245,8 @@ class _BookScreenState extends State<BookScreen> {
                                     child: SingleChildScrollView(
                                   scrollDirection: Axis.vertical,
                                   child: Text(
-                                    "Your analysis and evaluation should be organized into paragraphs that deal with single aspects of your argument. This arrangement can be challenging when your purpose is to consider the book as a whole, but it can help you differentiate elements of your criticism and pair assertions with evidence more clearly. You do not necessarily need to work chronologically through the book as you discuss it. Given the argument you want to make, you can organize your paragraphs more usefully by themes, methods, or other elements of the book. If you find it useful to include comparisons to other books, keep them brief so that the book under review remains in the spotlight. Avoid excessive quotation and give a specific page reference in parentheses when you do quote. Remember that you can state many of the author’s points in your own words.",
-                                    style: TextStyle(
+                                    description1,
+                                          style: TextStyle(
                                       fontSize: 16,
                                       color: mainWhite,
                                       overflow: TextOverflow.clip,

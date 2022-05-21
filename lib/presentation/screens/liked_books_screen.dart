@@ -4,7 +4,6 @@ import 'package:iconify_flutter/icons/ant_design.dart';
 import 'package:iconify_flutter/icons/healthicons.dart';
 import 'package:iconify_flutter/icons/ph.dart';
 import 'package:reading_app/presentation/widgets/widgets.dart';
-import 'package:reading_app/shared/constants/category.dart';
 import 'package:reading_app/shared/constants/screen.dart';
 import 'package:reading_app/shared/style/color/colors.dart';
 
