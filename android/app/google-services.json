@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "2928474098",
+    "project_id": "reading-app-e4bbb",
+    "storage_bucket": "reading-app-e4bbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2928474098:android:17e141522176edbfb85d6b",
+        "android_client_info": {
+          "package_name": "com.example.reading_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2928474098-sj5hinc0d4ft9mp5fdsoq0ujs9u8ddpc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reading_app",
+            "certificate_hash": "a07d8a95785017c0a481b5a1ea9ad91fc191065a"
+          }
+        },
+        {
+          "client_id": "2928474098-bs2m6659qr0c8go5dkutb3mvhjo81vhs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ2Sca2HBAyKuyXhKJ10shFDNPc1Yh4Eg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2928474098-bs2m6659qr0c8go5dkutb3mvhjo81vhs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
