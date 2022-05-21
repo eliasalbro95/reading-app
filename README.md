@@ -5,7 +5,7 @@ Link: https://www.behance.net/gallery/109807681/Reading-app-design-UIUX?tracking
 
 # 📷 Screenshots
 | Splash Screen |
-|------|
+|------|------|
 |<img src="./screenshots/splash_screen.jpg"/>|
 | Welcome | Google auth|
 |------|-------|
@@ -20,18 +20,18 @@ Link: https://www.behance.net/gallery/109807681/Reading-app-design-UIUX?tracking
 
 ## Packages
 # Style
-iconify_flutter
-flutter_launcher_icons
-flutter_native_splash
-flutter_app_name
-flutter_signin_button
+Iconify
+Flutter Launcher Icon
+Flutter Native Splash
+Flutte App Name 
+Flutter Signin Button
 # State Management 
-flutter_bloc
+BLoC State Management
 # Firebase
-firebase_core
-firebase_auth
-cloud_firestore
-google_sign_in
+Firebase Core
+Firebase Auth
+Cloud Firestore
+Google Sign In
 
 
 
