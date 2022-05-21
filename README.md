@@ -1,38 +1,42 @@
 # reading_app
-Simple Library App Called "be a PRO"
-UI designed by "Inga Sokolova" on Behance 
-Link: https://www.behance.net/gallery/109807681/Reading-app-design-UIUX?tracking_source=search_projects%7Cbooks%20app%20mobile
+* Simple Library App Called "be a PRO"
+* UI designed by "Inga Sokolova" on Behance 
+* Link: https://www.behance.net/gallery/109807681/Reading-app-design-UIUX?tracking_source=search_projects%7Cbooks%20app%20mobile
+
+# Note
+This Project is a begining for a Big prject in the future
 
 # 📷 Screenshots
-| Splash Screen |
+| Splash Screen | Welcome | 
 |------|------|
-|<img src="./screenshots/splash_screen.jpg"/>|
-| Welcome | Google auth|
+|<img src="./screenshots/splash_screen.jpg"/>|<img src="./screenshots/welcome_screen.jpg"/>|
+|Google auth|Home|
 |------|-------|
-|<img src="./screenshots/welcome_screen.jpg"/>|<img src="./screenshots/googe_Auth.jpg"/>|
-| Home | Home |
+|<img src="./screenshots/googe_Auth.jpg"/>|<img src="./screenshots/home1.jpg"/>|
+|Home|Profile|
 |------|-------|
-|<img src="./screenshots/home1.jpg"/>|<img src="./screenshots/home2.jpg"/>|
-| Profile | Book Page |
+|<img src="./screenshots/home2.jpg"/>|<img src="./screenshots/profile.jpg"/>|
+|Book Page|  |
 |------|-------|
-|<img src="./screenshots/profile.jpg"/>|<img src="./screenshots/book_screen.jpg"/>|
+|<img src="./screenshots/book_screen.jpg"/>||
 
 
 ## Packages
 # Style
-Iconify
-Flutter Launcher Icon
-Flutter Native Splash
-Flutte App Name 
-Flutter Signin Button
+* Iconify
+* Flutter Launcher Icon
+* Flutter Native Splash
+* Flutte App Name 
+* Flutter Signin Button
 # State Management 
-BLoC State Management
+* BLoC State Management
 # Firebase
-Firebase Core
-Firebase Auth
-Cloud Firestore
-Google Sign In
-
+* Firebase Core
+* Firebase Auth
+* Cloud Firestore
+* Google Sign In
+# API
+* Google Books API
 
 
 ## ✨ Requirements
