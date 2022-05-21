@@ -9,10 +9,10 @@ This Project is a begining for a Big prject in the future
 # 📷 Screenshots
 | Splash Screen | Welcome | 
 |------|------|
-|<img src="./screenshots/splash_screen.jpg"/>|<img src="./screenshots/welcome_screen.jpg"/>|
+|<img src="./screenshots/splash_screen.jpg"/>|<img src="./screenshots/login_screen.jpg"/>|
 |Google auth|Home|
 |------|-------|
-|<img src="./screenshots/googe_Auth.jpg"/>|<img src="./screenshots/home1.jpg"/>|
+|<img src="./screenshots/google_Auth.jpg"/>|<img src="./screenshots/home1.jpg"/>|
 |Home|Profile|
 |------|-------|
 |<img src="./screenshots/home2.jpg"/>|<img src="./screenshots/profile.jpg"/>|
